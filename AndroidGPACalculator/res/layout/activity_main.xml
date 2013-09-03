@@ -9,11 +9,29 @@
     tools:context=".MainActivity"
     android:orientation="vertical" >
 
-    <fragment android:name="com.triclops.androidgpacalculator.ClassFragment"
-        android:id="@+id/classLayout"
+    <ScrollView
         android:layout_weight="2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+        <fragment android:name="com.triclops.androidgpacalculator.ClassFragment"
+        	android:id="@+id/classLayout"
+        	android:layout_height="wrap_content"
+        	android:layout_width="fill_parent"/></ScrollView>
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_weight=".25"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_width="match_parent"/>
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="@string/calcButtonLabel"/>
+    <TextView 
+        android:id="@+id/gpaLabel"
+        android:layout_weight=".25"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:textSize="22sp"/>
     <TextView 
         android:id="@+id/NameLabel"
         android:layout_weight=".25"

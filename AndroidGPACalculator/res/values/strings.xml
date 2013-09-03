@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="nameLabel">Triclops Productions</string>
     <string name="Version">Version 0.03</string>
+    <string name="calcButtonLabel">Calculate GPA</string>
     <string name="class1_title">Class 1:</string>
     <string name="class2_title">Class 2:</string>
     <string name="class3_title">Class 3:</string>
