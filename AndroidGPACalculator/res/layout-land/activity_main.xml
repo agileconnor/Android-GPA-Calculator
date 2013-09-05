@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp">
+        <fragment android:name="com.triclops.androidgpacalculator.ClassFragment"
+        	android:id="@+id/classLayout"
+        	android:layout_height="wrap_content"
+        	android:layout_width="fill_parent"/></ScrollView>
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="@string/calcButtonLabel"/>
+    <TextView 
+        android:id="@+id/gpaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/calculateButton"
+        android:layout_marginTop="16dp"
+        android:textSize="22sp"/>
+    <TextView 
+        android:id="@+id/NameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/VersionLabel"
+        android:layout_marginBottom="12dp"
+        android:textSize="14sp"
+        android:text="@string/nameLabel"/>
+    <TextView 
+        android:id="@+id/VersionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        android:text="@string/Version"/></RelativeLayout>
+
+</LinearLayout>
