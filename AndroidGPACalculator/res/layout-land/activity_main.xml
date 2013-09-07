@@ -26,7 +26,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="@string/calcButtonLabel"/>
+        android:text="@string/calcButtonLabel"
+        android:onClick="onCalcPress"/>
     <TextView 
         android:id="@+id/gpaLabel"
         android:layout_width="wrap_content"
