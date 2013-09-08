@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPA Calculator</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="nameLabel">Triclops Producciones™</string>
+    <string name="Version">Versión 0.05</string>
+    <string name="calcButtonLabel">Calcular GPA</string>
+    <string name="gpaLabel">Su promedio es:</string>
+    <string name="class1_title">Clase 1:</string>
+    <string name="class2_title">Clase 2:</string>
+    <string name="class3_title">Clase 3:</string>
+    <string name="class4_title">Clase 4:</string>
+    <string-array name="gradeArray">
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D+</item>
+        <item>D</item>
+        <item>D-</item>
+        <item>F</item>
+    </string-array>
+</resources>

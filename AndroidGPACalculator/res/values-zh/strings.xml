@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPA Calculator</string>
+    <string name="action_settings">设置</string>
+    <string name="nameLabel">Triclops 制作™</string>
+    <string name="Version">版本 0.05</string>
+    <string name="calcButtonLabel">计算平均</string>
+    <string name="gpaLabel">你的平均</string>
+    <string name="class1_title">课一:</string>
+    <string name="class2_title">课二:</string>
+    <string name="class3_title">课三:</string>
+    <string name="class4_title">课四:</string>
+    <string-array name="gradeArray">
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D+</item>
+        <item>D</item>
+        <item>D-</item>
+        <item>F</item>
+    </string-array>
+</resources>
