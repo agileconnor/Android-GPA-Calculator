@@ -2,6 +2,8 @@ package com.triclops.androidgpacalculator;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,12 +14,17 @@ public class MainActivity extends FragmentActivity {
 	
 	private Spinner class1Spin, class2Spin, class3Spin, class4Spin;
 	private TextView gpaLabel;
+	private FragmentManager fmanage = getSupportFragmentManager();
+	private FragmentTransaction ftrans = fmanage.beginTransaction();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		gpaLabel = (TextView) findViewById(R.id.gpaLabel);
+		FourClassFragment fragment = new FourClassFragment();
+		ftrans.add(R.id.fragCont, fragment);
+		ftrans.commit();
 		class1Spin = (Spinner) findViewById(R.id.class1_spinner);
 		class2Spin = (Spinner) findViewById(R.id.class2_spinner);
 		class3Spin = (Spinner) findViewById(R.id.class3_spinner);
@@ -45,5 +52,6 @@ public class MainActivity extends FragmentActivity {
 		float GPA = GPACalc.getGPA(class1, class2, class3, class4);
 		gpaLabel.setText(getResources().getText(R.string.gpaLabel) +" "+ Float.toString(GPA));
 	}
+	
 
 }
