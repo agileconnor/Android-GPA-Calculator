@@ -3,10 +3,10 @@ package com.triclops.androidgpacalculator;
 public class GPACalc {
 	public static float getGPA(final int class1, final int class2, final int class3, final int class4 ) {
 		float GPA = 0;
-		float class1Num = gradeToGPA(class1);
-		float class2Num = gradeToGPA(class2);
-		float class3Num = gradeToGPA(class3);
-		float class4Num = gradeToGPA(class4);
+		final float class1Num = gradeToGPA(class1);
+		final float class2Num = gradeToGPA(class2);
+		final float class3Num = gradeToGPA(class3);
+		final float class4Num = gradeToGPA(class4);
 		GPA = class1Num + class2Num + class3Num + class4Num;
 		GPA = GPA/4;
 		return GPA;
