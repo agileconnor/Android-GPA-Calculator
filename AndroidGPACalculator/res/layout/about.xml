@@ -21,5 +21,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="@string/official_name"/>
+    <TextView 
+        android:id="@+id/versionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:text="@string/Version"/>
 
 </RelativeLayout>
