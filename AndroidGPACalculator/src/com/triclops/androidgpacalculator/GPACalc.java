@@ -12,36 +12,33 @@ public class GPACalc {
 		return GPA;
 	}
 	public static float gradeToGPA(final int grade) {
-		float gradeNum = 0;
-		if (grade == 0) {
-			gradeNum = 4;
-		}else if (grade == 1) {
-			gradeNum = 4;
-		}else if (grade == 2) {
-			gradeNum = 3.7f;
-		}else if (grade == 3) {
-			gradeNum = 3.3f;
-		}else if (grade == 4) {
-			gradeNum = 3;
-		}else if (grade == 5) {
-			gradeNum = 2.7f;
-		}else if (grade == 6) {
-			gradeNum = 2.3f;
-		}else if (grade == 7) {
-			gradeNum = 2;
-		}else if (grade == 8) {
-			gradeNum = 1.7f;
-		}else if (grade == 9) {
-			gradeNum = 1.3f;
-		}else if (grade == 10) {
-			gradeNum = 1;
-		}else if (grade == 11) {
-			gradeNum = .7f;
-		}else{
-			gradeNum = 0;
+		switch (grade) {
+		case 0:
+			return 4;
+		case 1:
+			return 4;
+		case 2:
+			return 3.7f;
+		case 3:
+			return 3.3f;
+		case 4:
+			return 3;
+		case 5:
+			return 2.7f;
+		case 6:
+			return 2.3f;
+		case 7:
+			return 2;
+		case 8:
+			return 1.7f;
+		case 9:
+			return 1.3f;
+		case 10:
+			return 1;
+		case 11:
+			return .7f;
+		default:
+			return 0;
 		}
-		
-		return gradeNum;
 	}
-
 }
