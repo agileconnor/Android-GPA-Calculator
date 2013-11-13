@@ -43,11 +43,12 @@ public class FourClassFragment extends Fragment{
 		calcButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				final int class1 = class1Spin.getSelectedItemPosition();
-				final int class2 = class2Spin.getSelectedItemPosition();
-				final int class3 = class3Spin.getSelectedItemPosition();
-				final int class4 = class4Spin.getSelectedItemPosition();
-				float GPA = GPACalc.getGPA(class1, class2, class3, class4);
+				int classes[] = new int[4];
+				classes[0] = class1Spin.getSelectedItemPosition();
+				classes[1] = class2Spin.getSelectedItemPosition();
+				classes[2] = class3Spin.getSelectedItemPosition();
+				classes[3] = class4Spin.getSelectedItemPosition();
+				float GPA = GPACalc.getGPA(classes);
 				gpaLabel.setText(getResources().getText(R.string.gpaLabel) +" "+ Float.toString(GPA));
 			}
 		});
