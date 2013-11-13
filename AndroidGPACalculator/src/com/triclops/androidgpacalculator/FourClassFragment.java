@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class FourClassFragment extends Fragment{
 	
 	private Spinner class1Spin, class2Spin, class3Spin, class4Spin;
 	private TextView gpaLabel;
+	private Button calcButton;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View fragView = inflater.inflate(R.layout.fragment_4classlayout, container, false);
@@ -37,6 +39,18 @@ public class FourClassFragment extends Fragment{
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 		gpaLabel = (TextView) getActivity().findViewById(R.id.gpaLabel);
+		calcButton = (Button) getActivity().findViewById(R.id.calculateButton);
+		calcButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				final int class1 = class1Spin.getSelectedItemPosition();
+				final int class2 = class2Spin.getSelectedItemPosition();
+				final int class3 = class3Spin.getSelectedItemPosition();
+				final int class4 = class4Spin.getSelectedItemPosition();
+				float GPA = GPACalc.getGPA(class1, class2, class3, class4);
+				gpaLabel.setText(getResources().getText(R.string.gpaLabel) +" "+ Float.toString(GPA));
+			}
+		});
 	}
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.add, menu);
@@ -50,13 +64,5 @@ public class FourClassFragment extends Fragment{
 		}
 	}
 	
-	public void onCalcPress(View view) {
-		final int class1 = class1Spin.getSelectedItemPosition();
-		final int class2 = class2Spin.getSelectedItemPosition();
-		final int class3 = class3Spin.getSelectedItemPosition();
-		final int class4 = class4Spin.getSelectedItemPosition();
-		float GPA = GPACalc.getGPA(class1, class2, class3, class4);
-		gpaLabel.setText(getResources().getText(R.string.gpaLabel) +" "+ Float.toString(GPA));
-	}
 
 }
