@@ -18,7 +18,8 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		FourClassFragment fragment = new FourClassFragment();
-		ftrans.add(R.id.fragCont, fragment);
+		ftrans.replace(R.id.fragCont, fragment);
+		ftrans.addToBackStack(null);
 		ftrans.commit();
 	}
 

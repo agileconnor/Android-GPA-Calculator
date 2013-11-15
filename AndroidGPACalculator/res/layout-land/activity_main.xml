@@ -11,7 +11,7 @@
         android:layout_height="fill_parent"
         android:layout_marginLeft="10dp"
         android:id="@+id/fragCont">
-        </ScrollView>
+    </ScrollView>
     <RelativeLayout 
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -24,8 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="@string/calcButtonLabel"
-        android:onClick="onCalcPress"/>
+        android:text="@string/calcButtonLabel"/>
     <TextView 
         android:id="@+id/gpaLabel"
         android:layout_width="wrap_content"

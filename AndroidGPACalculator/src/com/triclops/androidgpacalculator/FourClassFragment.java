@@ -38,6 +38,10 @@ public class FourClassFragment extends Fragment{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+	}
+	
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
 		gpaLabel = (TextView) getActivity().findViewById(R.id.gpaLabel);
 		calcButton = (Button) getActivity().findViewById(R.id.calculateButton);
 		calcButton.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +57,11 @@ public class FourClassFragment extends Fragment{
 			}
 		});
 	}
+	
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.add, menu);
 	}
+	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.add_button:
