@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/calculatoricon"
+        android:src="@drawable/ic_calculator"
         android:contentDescription="@string/icon_desc"/>
     <TextView 
         android:id="@+id/appTitle"

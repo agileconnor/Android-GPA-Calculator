@@ -22,7 +22,7 @@ public class FourClassFragment extends Fragment{
 	private Button calcButton;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View fragView = inflater.inflate(R.layout.fragment_4classlayout, container, false);
+		View fragView = inflater.inflate(R.layout.fourclass_fragment, container, false);
 		class1Spin = (Spinner) fragView.findViewById(R.id.class1_spinner);
 		class2Spin = (Spinner) fragView.findViewById(R.id.class2_spinner);
 		class3Spin = (Spinner) fragView.findViewById(R.id.class3_spinner);
