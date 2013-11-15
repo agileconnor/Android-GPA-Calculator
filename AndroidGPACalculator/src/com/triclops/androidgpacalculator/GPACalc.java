@@ -51,7 +51,7 @@ public class GPACalc {
 				GPAs[i] = .7f;
 				break;
 			default:
-				GPAs[i] = 8;
+				GPAs[i] = 0;
 				break;
 			}
 		}
