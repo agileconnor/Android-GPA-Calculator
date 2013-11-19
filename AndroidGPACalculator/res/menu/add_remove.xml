@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/add_button" 
+        android:showAsAction="ifRoom" 
+        android:title="@string/add_button" 
+        android:icon="@drawable/ic_action_new" 
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/remove_button"
+        android:showAsAction="ifRoom"
+        android:title="@string/remove_button"
+        android:icon="@drawable/ic_action_remove"
+        android:orderInCategory="2"/>
+
+</menu>

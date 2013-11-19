@@ -14,6 +14,7 @@
     <string name="class2_title">Class 2:</string>
     <string name="class3_title">Class 3:</string>
     <string name="class4_title">Class 4:</string>
+    <string name="class5_title">Class 5:</string>
 
     <string-array name="gradeArray">
         <item>A+</item>
@@ -34,5 +35,6 @@
     <string name="title_activity_about">About</string>
     <string name="hello_world">Hello world!</string>
     <string name="add_button">Add Class</string>
+    <string name="remove_button">Remove Class</string>
 
 </resources>

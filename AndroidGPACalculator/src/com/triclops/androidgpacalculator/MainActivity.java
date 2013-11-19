@@ -1,7 +1,9 @@
 package com.triclops.androidgpacalculator;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -9,18 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity {
-	
-	private FragmentManager fmanage = getSupportFragmentManager();
-	private FragmentTransaction ftrans = fmanage.beginTransaction();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		FourClassFragment fragment = new FourClassFragment();
-		ftrans.replace(R.id.fragCont, fragment);
-		ftrans.addToBackStack(null);
-		ftrans.commit();
+		SharedPreferences lastClass = getSharedPreferences("LASTCLASS", 0);
+		switchClass(lastClass.getInt("LASTCLASSNUM", 0));
 	}
 
 	@Override
@@ -39,7 +36,34 @@ public class MainActivity extends FragmentActivity {
         default:
                 return super.onOptionsItemSelected(item);
         }
-}
+	}
+	
+	public void switchClass(int classNum) {
+		setContentView(R.layout.activity_main);
+		FragmentManager fmanage = getSupportFragmentManager();
+		FragmentTransaction ftrans = fmanage.beginTransaction();
+		Fragment fragment = null;
+		SharedPreferences lastClass = getSharedPreferences("LASTCLASS", 0);
+		SharedPreferences.Editor edit = lastClass.edit();
+		switch (classNum) {
+		case 4:
+			fragment = new FourClassFragment();
+			break;
+		case 5:
+			fragment = new FiveClassFragment();
+			break;
+		default:
+			fragment = new FourClassFragment();
+			classNum = 4;
+			break;
+		}
+		ftrans.replace(R.id.fragCont, fragment);
+		ftrans.addToBackStack(null);
+		ftrans.commit();
+		fmanage.executePendingTransactions();
+		edit.putInt("LASTCLASSNUM", classNum);
+		edit.commit();
+	}
 	
 	
 
