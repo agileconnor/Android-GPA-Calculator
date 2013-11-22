@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GPA Calculator</string>
+    <string name="official_name">Android GPA Calculator</string>
+    <string name="icon_desc">Android GPA Calculator 图标图像</string>
+    <string name="action_about">关于</string>
     <string name="action_settings">设置</string>
     <string name="nameLabel">Triclops 制作™</string>
-    <string name="Version">版本 0.06</string>
+    <string name="Version">版本 0.08</string>
     <string name="calcButtonLabel">计算平均</string>
     <string name="gpaLabel">你的平均</string>
     <string name="class1_title">课一:</string>
     <string name="class2_title">课二:</string>
     <string name="class3_title">课三:</string>
     <string name="class4_title">课四:</string>
+    <string name="class5_title">课五:</string>
+    <string name="class6_title">课六:</string>
+    <string name="class7_title">课七:</string>
+    <string name="class8_title">课八:</string>
+    
     <string-array name="gradeArray">
         <item>A+</item>
         <item>A</item>
@@ -25,4 +33,9 @@
         <item>D-</item>
         <item>F</item>
     </string-array>
+    
+    <string name="title_activity_about">关于</string>
+    <string name="add_button">添加类</string>
+    <string name="remove_button">删除类</string>
+    
 </resources>
