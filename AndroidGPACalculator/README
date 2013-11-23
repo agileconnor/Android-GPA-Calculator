@@ -2,13 +2,13 @@ This is an advanced GPA calculator for Android. This software will run on Androi
 ----
 Current Features:
 -Simple Layout
+-Creditless GPA Calculation
+-User saves
 ----
 Planned Features:
 -Credit GPA Calculation
--Creditless GPA Calculation
 -Gradebook Tie-In
 -GPA Statistics
--User saves
 -Share GPA to Facebook
 
-Version 0.075
+Version 0.1

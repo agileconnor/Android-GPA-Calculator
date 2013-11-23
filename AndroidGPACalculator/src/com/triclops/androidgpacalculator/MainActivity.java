@@ -52,6 +52,15 @@ public class MainActivity extends FragmentActivity {
 		case 5:
 			fragment = new FiveClassFragment();
 			break;
+		case 6:
+			fragment = new SixClassFragment();
+			break;
+		case 7:
+			fragment = new SevenClassFragment();
+			break;
+		case 8:
+			fragment = new EightClassFragment();
+			break;
 		default:
 			fragment = new FourClassFragment();
 			classNum = 4;
