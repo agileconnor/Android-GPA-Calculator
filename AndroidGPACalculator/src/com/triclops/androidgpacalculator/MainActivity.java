@@ -1,5 +1,6 @@
 package com.triclops.androidgpacalculator;
 
+import android.app.backup.BackupManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,12 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity {
+	
+	BackupManager backup = new BackupManager(this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		SharedPreferences lastClass = getSharedPreferences("LASTCLASS", 0);
+		SharedPreferences lastClass = getSharedPreferences("PREFS", 0);
 		switchClass(lastClass.getInt("LASTCLASSNUM", 0));
 	}
 
@@ -43,7 +46,7 @@ public class MainActivity extends FragmentActivity {
 		FragmentManager fmanage = getSupportFragmentManager();
 		FragmentTransaction ftrans = fmanage.beginTransaction();
 		Fragment fragment = null;
-		SharedPreferences lastClass = getSharedPreferences("LASTCLASS", 0);
+		SharedPreferences lastClass = getSharedPreferences("PREFS", 0);
 		SharedPreferences.Editor edit = lastClass.edit();
 		switch (classNum) {
 		case 4:
@@ -61,6 +64,9 @@ public class MainActivity extends FragmentActivity {
 		case 8:
 			fragment = new EightClassFragment();
 			break;
+		case 9:
+			fragment = new NineClassFragment();
+			break;
 		default:
 			fragment = new FourClassFragment();
 			classNum = 4;
@@ -72,6 +78,7 @@ public class MainActivity extends FragmentActivity {
 		fmanage.executePendingTransactions();
 		edit.putInt("LASTCLASSNUM", classNum);
 		edit.commit();
+		backup.dataChanged();
 	}
 	
 	
